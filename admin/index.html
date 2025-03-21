@@ -1,0 +1,36 @@
+<!-- admin/index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>IoT評価用Webサーバ - トップ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>IoT評価用Webサーバ - トップ</h1>
+  <p>下記メニューから各種ページ遷移をお試しください。</p>
+
+  <ul>
+    <li><a href="Basic_WAN.htm">WAN設定ページ (静的HTML)</a></li>
+    <li><a href="Advanced_QoS.asp">QoS設定ページ (ASP形式)</a></li>
+    <li><a href="frameset.html">フレームセットの例</a></li>
+    <li><a href="iframe.html">iframeの例</a></li>
+    <li><a href="meta_refresh.html">メタリフレッシュの例</a></li>
+    <li><a href="ws_example.html">WebSocket風ページ (Ajax/WS)</a></li>
+  </ul>
+
+  <hr>
+  <h2>ログインフォーム</h2>
+  <form action="/cgi-bin/login.cgi" method="POST">
+    <label for="user">ユーザ名:</label>
+    <input type="text" id="user" name="username" required>
+    <br><br>
+    <label for="pass">パスワード:</label>
+    <input type="password" id="pass" name="password" required>
+    <br><br>
+    <input type="submit" value="ログイン">
+  </form>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

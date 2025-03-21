@@ -1,0 +1,36 @@
+<!-- admin/Basic_WAN.htm -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>WAN設定</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>WAN設定ページ (静的HTML)</h1>
+  <form action="/cgi-bin/apply.cgi" method="POST">
+    <p>
+      <label>接続タイプ: 
+        <select name="wan_type">
+          <option value="dhcp">DHCP</option>
+          <option value="pppoe">PPPoE</option>
+          <option value="static">固定IP</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label>PPPoEユーザ名: 
+        <input type="text" name="pppoe_user" value="">
+      </label>
+    </p>
+    <p>
+      <label>PPPoEパスワード:
+        <input type="password" name="pppoe_pass" value="">
+      </label>
+    </p>
+    <input type="hidden" name="page_origin" value="Basic_WAN">
+    <button type="submit">設定を適用</button>
+  </form>
+  <p><a href="index.html">トップへ戻る</a></p>
+</body>
+</html>

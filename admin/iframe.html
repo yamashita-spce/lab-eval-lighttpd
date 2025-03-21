@@ -1,0 +1,21 @@
+<!-- admin/iframe.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>iframe例</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>iframeを使ったページ遷移例</h1>
+  <div style="float:left; width:20%;">
+    <h3>メニュー</h3>
+    <p><a href="Basic_WAN.htm" target="mainContent">WAN設定</a></p>
+    <p><a href="Advanced_QoS.asp" target="mainContent">QoS設定</a></p>
+    <p><a href="index.html" target="_parent">トップへ戻る</a></p>
+  </div>
+  <div style="float:left; width:80%;">
+    <iframe name="mainContent" src="Basic_WAN.htm" style="width:100%; height:400px;"></iframe>
+  </div>
+</body>
+</html>

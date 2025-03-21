@@ -1,0 +1,26 @@
+<!-- admin/frameset.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>フレームセット例</title>
+</head>
+<frameset cols="25%,75%">
+  <frame src="menu.html" name="menuFrame">
+  <frame src="Basic_WAN.htm" name="mainFrame">
+</frameset>
+</html>
+<!-- admin/menu.html (フレーム左側メニュー) -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>メニュー</title>
+</head>
+<body>
+  <h3>メニュー</h3>
+  <p><a href="Basic_WAN.htm" target="mainFrame">WAN設定</a></p>
+  <p><a href="Advanced_QoS.asp" target="mainFrame">QoS設定</a></p>
+  <p><a href="index.html" target="_top">トップへ戻る</a></p>
+</body>
+</html>

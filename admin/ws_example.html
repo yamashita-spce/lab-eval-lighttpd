@@ -1,0 +1,30 @@
+<!-- admin/ws_example.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket / Ajax例</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>WebSocket (またはAjax) で動的更新</h1>
+  <button id="btnFetch">ステータス取得 (Ajax)</button>
+  <pre id="statusArea"></pre>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Ajax (Fetch) で status.cgi のJSONを取る例
+    document.getElementById('btnFetch').addEventListener('click', () => {
+      fetch('/cgi-bin/status.cgi')
+        .then(res => res.text())
+        .then(text => {
+          document.getElementById('statusArea').textContent = text;
+        })
+        .catch(err => console.error(err));
+    });
+
+    // WebSocket風(実際にlighttpdでWSを通すにはmod_websocket等が必要)
+    // ここではデモとして location.href で ws://... を書くだけ
+  </script>
+</body>
+</html>
